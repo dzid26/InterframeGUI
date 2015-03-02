@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://ftp.highframerate.x10.mx/www/|ftp.highframerate.x10.mx/|ftp.highframerate.x10.mx\|ftp://ftp.highframerate.freehostingcloud.com/|C:\Users\Radek Jarecki\Desktop\interframe\</PublishUrlHistory>
+    <InstallUrlHistory>http://highframerate.x10.mx/|http://http://highframerate.x10.mx/|http://highframerate.freehostingcloud.com/InterFrameGUI/|http://highframerate.freehostingcloud.com/InterFrameGUI/beta/|http://highframerate.freehostingcloud.com/InterFrameGUIbeta/</InstallUrlHistory>
+    <SupportUrlHistory>http://highframerate.wordpress.com/interframegui-download/</SupportUrlHistory>
+    <UpdateUrlHistory>http://highframerate.x10.mx/|http://highframerate.freehostingcloud.com/InterFrameGUI/|http://localhost/InterframeGUI/|http://radzieckie.ovh.org/InterFrameGUI/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory>http://highframerate.wordpress.com/interframegui-download/</ErrorReportUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
