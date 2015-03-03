@@ -68,7 +68,7 @@ namespace InterframeGUI
             
         }
 
-        private void addVideoFileToInputQueueGridView(string[] fileNames)
+        public void addVideoFileToInputQueueGridView(string[] fileNames)
         {
             inputQueueGridView.ClearSelection();
             Item videoJob = null;
@@ -283,15 +283,27 @@ namespace InterframeGUI
 
         private void transcodeButton_Click(object sender, EventArgs e)
         {
-            currentWork.StartWork();
-            transcodeButton.Enabled = false;
-            AbortButton.Enabled = true;
-            PauseButton.Enabled = true;
-            clearQueueButton.Enabled = false;
-            //Refresh_controls_and_fields();
+            if (!currentWork.Running)
+            {
+                StartTranscodeGuiAction();
+            }
+        }
+
+        public void transcodeStartCommand()
+        {
+            if (!currentWork.Running)
+            {
+                StartTranscodeGuiAction();
+            }
         }
 
         private void AbortButton_Click(object sender, EventArgs e)
+        {
+            currentWork.StopWork();
+            StopGuiAction();
+        }
+
+        public void abortCommand()
         {
             currentWork.StopWork();
             StopGuiAction();
@@ -311,6 +323,17 @@ namespace InterframeGUI
             
             //Refresh_controls_and_fields();
         }
+
+        public void StartTranscodeGuiAction()
+        {
+            currentWork.StartWork();
+                transcodeButton.Enabled = false;
+                AbortButton.Enabled = true;
+                PauseButton.Enabled = true;
+                clearQueueButton.Enabled = false;
+                //Refresh_controls_and_fields();
+        }
+
 
         private void x264Preset_Scroll(object sender, EventArgs e)
         {
@@ -364,9 +387,7 @@ namespace InterframeGUI
                                 avisynthScriptBox.ScrollToCaret();
                             }
                             avisynthScriptBox.Text = inputItem.assignedVideo.interframe.Script;
-                            String[] arguments = Environment.GetCommandLineArgs();
-                            outputFileTextBox.Text = arguments[1];
-                            //inputItem.assignedVideo.mkvmerge.FilePath;
+                            outputFileTextBox.Text = inputItem.assignedVideo.mkvmerge.FilePath;
                             outputFileTextBox.Enabled = true;
                             SaveVideoButton.Enabled = true;
                         }
@@ -439,7 +460,7 @@ namespace InterframeGUI
 
         private void InterframeGUI_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void openOutputFileDialog_FileOk(object sender, CancelEventArgs e)

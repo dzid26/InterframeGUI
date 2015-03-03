@@ -14,4 +14,7 @@
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <StartArguments>"S:\Videos\Szkarłatny pilot %281992%29[Lektor PL].avi"</StartArguments>
+  </PropertyGroup>
 </Project>
