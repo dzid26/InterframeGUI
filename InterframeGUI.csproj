@@ -34,9 +34,8 @@
     <MinimumRequiredVersion>0.8.0.13</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
-    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>139</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationRevision>206</ApplicationRevision>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -73,11 +72,10 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1D81626CD60AE5FF5BA305BB2225E3A908FF9644</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C2891C8E9B0AAE901770E113AB46E654D9B2D17E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>dzid_.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -88,6 +86,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>InterframeGUI.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility">
@@ -234,7 +235,9 @@
     <Content Include="Avisynth plugins\InterFrame2.avsi">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="dzid_.pfx" />
     <None Include="InterframeGUI_1_TemporaryKey.pfx" />
+    <None Include="InterframeGUI_3_TemporaryKey.pfx" />
     <None Include="InterframeGUI_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\Job.datasource" />
